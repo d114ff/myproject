@@ -53,7 +53,49 @@ func array2d() {
 	fmt.Printf("cap(arr1) = %d\n", cap(arr1))
 }
 
-func main() {
+// go语言中函数传参都是按值传递，即传递数组实际上传的是数组的拷贝
+func update_array1(arr [5]int) {
+	fmt.Printf("array in function, address is %p\n", &arr[0])
+	arr[0] = 8888
+}
+
+// 传数组的指针
+func update_array2(arr *[5]int) {
+	fmt.Printf("array in function, address is %p\n", &arr[0])
+	arr[0] = 8888 // 传数组指针可以在原来空间内存直接改
+}
+
+func update_array3(arr [5]*int) {
+	*arr[0] = 88 //因为传的是int指针，所以直接在原来的内存空间上进行修改
+
+}
+
+// for range取得的是值拷贝
+
+func for_range_arry() {
+	arr := [...]int{1, 2, 3}
+	for i, ele := range arr { // ele 是 arr中元素的拷贝
+		arr[i] += 8 // 修改 arr里的元素，不影响ele
+		fmt.Printf("i = %d，arr[%d] = %d ele = %d\n", i, i, arr[i], ele)
+		ele += 1 // 修改 ele不影响arr
+		fmt.Printf("i = %d，arr[%d] = %d ele = %d\n", i, i, arr[i], ele)
+	}
+	for i := 0; i < len(arr); i++ {
+		fmt.Printf("i = %d，arr[%d] = %d\n", i, i, arr[i])
+	}
+}
+
+func main15() {
 	//array1d()
-	array2d()
+	//array2d()
+	//arr := [5]int{5, 4, 3, 2, 1}
+	//update_array1(arr)
+	//fmt.Println(arr[0])
+	//update_array2(&arr)
+	//fmt.Println(arr[0])
+	//a, b, c := 1, 2, 3
+	//brr := [5]*int{&a, &b, &c}
+	//update_array3(brr)
+	//fmt.Println(*brr[0])
+	//for_range_arry()
 }
