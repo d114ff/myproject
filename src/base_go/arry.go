@@ -88,9 +88,9 @@ func for_range_arry() {
 func main15() {
 	//array1d()
 	//array2d()
-	//arr := [5]int{5, 4, 3, 2, 1}
-	//update_array1(arr)
-	//fmt.Println(arr[0])
+	arr := [5]int{5, 4, 3, 2, 1}
+	update_array1(arr)
+	fmt.Println(arr[0])
 	//update_array2(&arr)
 	//fmt.Println(arr[0])
 	//a, b, c := 1, 2, 3
