@@ -5,7 +5,7 @@ import (
 	"slices"
 )
 
-func main() {
+func main17() {
 	arr := []int{3, 7, 4, 6, 8, 1}
 	slices.Sort(arr)
 	fmt.Println(arr)                          // 按照顺序排序
@@ -52,7 +52,7 @@ func main() {
 	drr := arr
 	fmt.Println("相等", slices.Equal(drr, arr)) //true
 	arr[0]++
-	fmt.Println(arr)
+	fmt.Println("arr:", arr)
+	fmt.Println("drr:", drr)
 	fmt.Println("相等", slices.Equal(drr, arr)) //true
-
 }
