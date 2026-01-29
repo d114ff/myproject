@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func main() {
+func main2() {
 	var MyName int
 	fmt.Print(MyName)
 	fmt.Println(MyName) //使用变量

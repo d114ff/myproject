@@ -5,15 +5,6 @@ import (
 	"time"
 )
 
-func main13() {
-	c, d := 3, 5
-	fmt.Println(c, d)
-	//arg1(c, d)
-	//arg3(&c, &d)
-	//fmt.Println(c, d)
-	//fmt.Println(return1(c, d))
-}
-
 // a,b是形参，邢参是函数内部的局部变量，实参的值会拷贝给邢参
 func arg1(a, b int) { // 参数类型相同时可以只写一次
 	a = a + b // 在函数内部修改形参的参数值，不影响实参
@@ -50,4 +41,42 @@ func return2(a, b int) (c int) { // 返回值变量c已经声明好了
 func return3() (int, int) { // 可以没有形参，可以返回多个参数
 	now := time.Now()
 	return now.Hour(), now.Hour()
+}
+
+// 不定长参数
+func variable_ength_arg(a int, other ...int) int { //调用该函数时，other可以对应0个参数也可以对应多个参数
+	sum := a
+	//不定长参数实际上是slice类型
+	for _, ele := range other {
+		sum += ele
+	}
+	if len(other) > 0 {
+		fmt.Printf("first ele %d len %d cap %d\n", other[0], len(other), cap(other))
+	} else {
+		fmt.Printf("len %d cap %d\n", len(other), cap(other))
+	}
+	return sum
+}
+
+func sum(arr ...int) int {
+	s := 0
+	if len(arr) == 0 {
+		return s
+	}
+	s = s + arr[0]
+	s = s + sum(arr[1:]...)
+	return s
+
+}
+
+func main() { // 13
+	//c, d := 3, 5
+	//fmt.Println(c, d)
+	//arg1(c, d)
+	//arg3(&c, &d)
+	//fmt.Println(c, d)
+	//fmt.Println(return1(c, d))
+	//sum := variable_ength_arg(1, 2, 3, 4)
+	sum := sum(1, 2, 3)
+	fmt.Println(sum)
 }
