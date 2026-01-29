@@ -69,7 +69,7 @@ func sum(arr ...int) int {
 
 }
 
-func main() { // 13
+func main13() { // 13
 	//c, d := 3, 5
 	//fmt.Println(c, d)
 	//arg1(c, d)
