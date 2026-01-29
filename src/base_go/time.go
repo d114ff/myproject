@@ -16,8 +16,8 @@ func basicTime() {
 	time.Sleep(2 * time.Second) // 休眠2秒
 	t1 := time.Now()
 	fmt.Println(t1)
-	//diff1 := t1.Sub(t0) //计算时间差，返回类型是time.Duration
-	diff1 := time.Since(t0)
+	diff1 := t1.Sub(t0) //计算时间差，返回类型是time.Duration
+	//diff1 := time.Since(t0)
 	fmt.Println(diff1)                                                           //秒上相同
 	diff2 := time.Since(t0)                                                      //等价于t1 := time.Now();t1.Sub(t0)
 	fmt.Println(diff2)                                                           //秒上相同
@@ -57,7 +57,34 @@ func parse_format() {
 
 }
 
+// 执行周期任务
+func ticker() {
+	tk := time.NewTicker(1 * time.Second)
+	for i := 0; i < 10; i++ {
+		<-tk.C // 阻塞1秒中
+		fmt.Printf("现在时间%s\n", time.Now().Format(TIME_FMT))
+	}
+	tk.Stop() //用完记得调用stop
+}
+
+// 经过一段时间后，触发一次任务
+func timer() {
+	fmt.Printf("现在时间是%s\n", time.Now().Format(TIME_FMT))
+	tm := time.NewTimer(3 * time.Second)
+	<-tm.C //阻塞3秒钟，最多只能连续调用一次
+	fmt.Printf("现在时间是%s\n", time.Now().Format(TIME_FMT))
+	tm.Stop()
+	//通过time.After也可以实现上述功能
+	fmt.Println("------------------------------------------")
+	fmt.Printf("现在时间是%s\n", time.Now().Format(TIME_FMT))
+	<-time.After(3 * time.Second) // 阻塞3秒
+	fmt.Printf("现在时间是%s\n", time.Now().Format(TIME_FMT))
+
+}
+
 func main() {
-	//basicTime()
-	parse_format()
+	basicTime()
+	//parse_format()
+	//ticker()
+	//timer()
 }
