@@ -93,7 +93,7 @@ func changeChan(ch chan bool) {
 }
 
 // main - 程序入口，演示数组、切片、map和channel的传递特性
-func main() {
+func main21() {
 	//rangeChannel() // 注释掉，先演示引用类型传递
 	fmt.Println(strings.Repeat("*", 20)) // 打印分隔线
 
