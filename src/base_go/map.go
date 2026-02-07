@@ -76,7 +76,7 @@ func update_map() {
 	fmt.Println("-----------")
 }
 
-func main19() {
+func main24() {
 	//key_type()
 	update_map()
 }

@@ -93,7 +93,7 @@ func seaTrTransport(src, dest string, steamer Steamer) error {
 	}
 }
 
-func main22() {
+func main30() {
 	car := &Car{"宝马", 100}
 	ship := &Shiper{"哈哈号", 220, 200000}
 

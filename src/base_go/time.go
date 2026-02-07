@@ -82,7 +82,7 @@ func timer() {
 
 }
 
-func main20() {
+func main25() {
 	basicTime()
 	//parse_format()
 	//ticker()
