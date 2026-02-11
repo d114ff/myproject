@@ -20,7 +20,7 @@ func SumI(args ...EmptyInterface) int {
 	}
 	return rect
 }
-func main() {
+func main31() {
 	fmt.Println()
 	fmt.Println(1)
 	fmt.Println("1")
