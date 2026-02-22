@@ -29,6 +29,6 @@ func main23() {
 	o.tonage = 1000
 	o.name = "ddq"
 	o.price++
-	seaTrTransport("BJ", "SH", Shiper(o)) //Odt没有实现Steamer接口
+	//seaTrTransport("BJ", "SH", Shiper(o)) //Odt没有实现Steamer接口
 
 }

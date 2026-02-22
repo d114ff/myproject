@@ -57,7 +57,7 @@ func example() {
 	fmt.Println("主goroutine继续执行")
 }
 
-func main() {
+func main32() {
 	//allEmptyStructlsSame()
 	//scenariosOfEmptyStruct()
 	example()
