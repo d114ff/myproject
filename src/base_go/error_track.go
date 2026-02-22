@@ -45,7 +45,7 @@ func c(s string) (int, error) {
 }
 
 func handler() int {
-	if result, err := a("0ae"); err != nil {
+	if result, err := a("5"); err != nil {
 		fmt.Println(err) //准备处理error，即不打算把error再往上抛了，仅在此处打印error
 		if errors.Is(err, ErrNotFound) {
 			return 400
