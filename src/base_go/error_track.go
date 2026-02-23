@@ -73,7 +73,7 @@ func handler() int {
 	}
 }
 
-func main() {
+func main35() {
 	//errorWrap()
 	fmt.Println(handler())
 }
