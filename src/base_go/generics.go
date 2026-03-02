@@ -94,7 +94,7 @@ func httpRPC[T GetUserRequest | GetBookRequest](request T) {
 	http.Post(url, "application/json", bytes.NewReader(bs))
 }
 
-func main() {
+func main40() {
 	c := getBigger(3, 6)
 	fmt.Println(c)
 	getBigger2[int32](8, 9) // 调用函数的时候指定一个类型（int32或者int64）
