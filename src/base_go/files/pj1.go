@@ -137,7 +137,7 @@ func (lib *Library) ListAll() {
 	}
 }
 
-func main() {
+func main1() {
 	lib := NewLibrary("市立图书馆")
 	book1 := NewBook("Go 程序设计语言", "Donovan", "978-0")
 	book2 := NewBook("算法导论", "Cormen", "978-1")
