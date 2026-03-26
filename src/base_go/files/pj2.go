@@ -222,7 +222,7 @@ func Battle(a, b Fighter) {
 
 }
 
-func main() {
+func main2() {
 	warrior := NewWarrior("铁甲虎")
 	mage := NewMage("闪电法师")
 	// Battle 接收 Fighter 接口，两种类型都能传入
