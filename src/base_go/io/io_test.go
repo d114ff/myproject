@@ -1,8 +1,10 @@
 package io_test
 
 import (
+	"fmt"
 	"myproject/src/base_go/io"
 	"testing"
+	"time"
 )
 
 func TestWriteFile(t *testing.T) {
@@ -18,4 +20,30 @@ func TestReadFileWithBuffer(t *testing.T) {
 
 func TestWriteFileWithBuffer(t *testing.T) {
 	io.WiteFileWithBuffer()
+}
+
+func TestBufferedFileWriter(t *testing.T) {
+	t1 := time.Now()
+	io.WiteDirect("../data/no_buffer.txt")
+	t2 := time.Now()
+	io.WriteWithBuffer("../data/with_buffer.txt")
+	t3 := time.Now()
+	fmt.Printf("不用缓冲耗时%dms，用缓冲耗时%dms\n", t2.Sub(t1).Milliseconds(), t3.Sub(t2).Milliseconds())
+}
+
+func TestCreateFile(t *testing.T) {
+	io.CreateFile("../data/pmdpa.txt")
+}
+
+func TestWalkDir(t *testing.T) {
+	io.WalkDir("../data/sys")
+
+}
+
+func TestSplitFile(t *testing.T) {
+	io.SplitFile("../img/大乔乔好课.png", "../img/图像分割", 4)
+}
+
+func TestMergeFile(t *testing.T) {
+	io.MergeFile("../img/图像分割", "../img/图像合并.png")
 }
