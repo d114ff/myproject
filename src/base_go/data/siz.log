@@ -1,0 +1,8 @@
+{"time":"2026-04-14 11:24:06.370","level":"INFO","source":{"function":"myproject/src/base_go/io.Slog","file":"/data/gopath/myproject/src/base_go/io/log.go","line":71},"msg":"加法运算","a":3,"b":4,"sum":7}
+{"time":"2026-04-14 11:24:06.370","level":"ERROR","source":{"function":"myproject/src/base_go/io.Slog","file":"/data/gopath/myproject/src/base_go/io/log.go","line":72},"msg":"Hello 大乔乔"}
+{"time":"2026-04-14 11:24:06.370","level":"INFO","source":{"function":"myproject/src/base_go/io.Slog","file":"/data/gopath/myproject/src/base_go/io/log.go","line":76},"msg":"welcome","user":"张朝阳","age":18}
+{"time":"2026-04-14T11:25:16.107326049+08:00","level":"INFO","source":{"function":"myproject/src/base_go/io.Slog","file":"/data/gopath/myproject/src/base_go/io/log.go","line":70},"msg":"加法运算","a":3,"b":4,"sum":7}
+{"time":"2026-04-14T11:25:16.107435429+08:00","level":"ERROR","source":{"function":"myproject/src/base_go/io.Slog","file":"/data/gopath/myproject/src/base_go/io/log.go","line":71},"msg":"Hello 大乔乔"}
+time=2026-04-14T11:25:46.446+08:00 level=DEBUG source=/data/gopath/myproject/src/base_go/io/log.go:69 msg=加法运算 a=3 b=4 sum=7
+time=2026-04-14T11:25:46.446+08:00 level=INFO source=/data/gopath/myproject/src/base_go/io/log.go:70 msg=加法运算 a=3 b=4 sum=7
+time=2026-04-14T11:25:46.446+08:00 level=ERROR source=/data/gopath/myproject/src/base_go/io/log.go:71 msg="Hello 大乔乔"

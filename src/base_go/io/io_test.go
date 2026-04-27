@@ -84,3 +84,21 @@ func TestCopy(t *testing.T) {
 func TestJsonSerialize(t *testing.T) {
 	io.JsonSerialize()
 }
+
+func TestNewLoger(t *testing.T) {
+	logger := io.NewLoger("../data/biz.log")
+	io.Log(logger)
+}
+
+func TestSlog(t *testing.T) {
+	logger := io.NewSlogger("../data/siz.log")
+	io.Slog(logger)
+}
+
+func TestSysCall(t *testing.T) {
+	io.SysCall()
+}
+
+func TestUseRegex(t *testing.T) {
+	io.UseRegex()
+}
