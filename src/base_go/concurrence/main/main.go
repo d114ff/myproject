@@ -5,5 +5,9 @@ import (
 )
 
 func main() {
-	concurrence.SimpleGoroutine()
+	//concurrence.SimpleGoroutine()
+	//concurrence.SubRoutine()
+	//concurrence.WaitGroup()
+	//concurrence.Sum()
+	concurrence.Errgroup()
 }
