@@ -9,5 +9,6 @@ func main() {
 	//concurrence.SubRoutine()
 	//concurrence.WaitGroup()
 	//concurrence.Sum()
-	concurrence.Errgroup()
+	//concurrence.Errgroup()
+	concurrence.Atomic()
 }
